@@ -1,0 +1,22 @@
+.toDoList{
+    width: 100%;
+    background-color: #012441;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.todo{
+    width: 100%;
+    
+    border-radius: 10px;
+    padding: 2%;
+    margin-top: 3%;
+}
+
+.done{
+background-color: rgb(2, 179, 2);
+}
+
+.notDone{
+background-color: #156aac;
+}

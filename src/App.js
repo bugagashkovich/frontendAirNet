@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import Calendar from "./components/calendar";
+import User from "./components/user";
+
+import "./styles/App.css";
+import "./styles/calendar.css";
+import "./styles/modal.css";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  function handleUser(user) {
+    setUser(user);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <User handleUser={handleUser} />
+      <Calendar user={user} />
     </div>
   );
 }
