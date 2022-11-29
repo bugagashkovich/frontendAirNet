@@ -85,6 +85,7 @@ export default function TodoList({ day, owner, todoList, setTodoList }) {
   return (
     <div>
       <div>Задачи на {day.date.toLocaleString()}</div>
+      <p>Нажмите на название задачи, чтобы пометить как выполненную</p>
       <div>{list}</div>
       <form
         className="form-group mb-3"
